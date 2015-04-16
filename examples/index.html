@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Date Range Picker</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/date-range-picker.css">
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/date-range-picker.js"></script>
+    <script>
+        $(function() { r = $("#myDate").datepicker({ disableddates: [new Date("04/24/2015"), new Date("04/21/2015")],showButtonPanel:true,  showWeek: true,firstDay: 1});});
+    </script>
+</head>
+<body>
+    <div id="myDate" name="myDate">
+</body>
+</html>
