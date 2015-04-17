@@ -21,8 +21,8 @@ The plugin uses the quad tree algorithm to minimize/optimize the number of point
 Include all javascripts and CSS
 
 - **Include the CSS**
-- {The jquery UI CSS} jquery-ui.css
-- {The date range picker CSS} date-range-picker.css
+- _The jquery UI CSS_ jquery-ui.css
+- _The date range picker CSS_ date-range-picker.css
 - **Include the javascripts**
 - jquery.min.js
 - jquery-ui.js
