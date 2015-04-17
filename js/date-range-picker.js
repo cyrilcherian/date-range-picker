@@ -73,7 +73,7 @@ $.fn.datepicker = function(options) {
     __mypicker.apply(this, [options]);
     $(document).bind('keydown',function( event ){
         if (event.ctrlKey || event.metaKey){
-            options.ctrlKey = event.ctrlKey;
+            options.ctrlKey = event.ctrlKey || event.metaKey;
         }
     });
     $(document).bind('keyup',function( event ){
