@@ -8,6 +8,8 @@ Provides implementation to select date range.
 
 **INFO:** (CTRL + Click) to select/unselect date.
 
+**INFO:** For Mac Users (Command + Click) to select/unselect date.
+
 *Requires JQuery and JQuery-UI*
 
 ## Using the plugin
