@@ -2,8 +2,8 @@ JQuery Date Range Picker
 =====================
 
 Provides implementation to select date range. 
-.
-The plugin uses the quad tree algorithm to minimize/optimize the number of points to be drawn.
+**INFO:** (Click) to select date range.
+**INFO:** (CTRL + Click) to select/unselect date.
 
 *Requires JQuery and JQuery-UI*
 
