@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Date Range Picker</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/date-range-picker.css">
+    <script type="text/javascript" src="../lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/date-range-picker.js"></script>
+    <script>
+        var drp; 
+        function makedatepicker(){
+            drp = $("#myDate").datepicker({showButtonPanel:true });
+        }
+        $( document ).ready(function() {
+            makedatepicker();
+        });
+    </script>
+</head>
+<body>
+    <div id="myDate" name="myDate"></div>
+    <button class="ui-datepicker-close ui-state-default ui-priority-secondary ui-corner-all" id="getRange" name="getRange" style="margin-top: 40px;height: 30px;">Get Selected Date</button>
+</body>
+</html>
