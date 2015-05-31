@@ -17,6 +17,7 @@ Provides implementation to select date range.
 * For Date Range Picker on div: [Demo](http://cyrilcherian.github.io/date-range-picker/demo/datepickerdiv.html)
 * For Date Range Picker on input: [Demo](http://cyrilcherian.github.io/date-range-picker/demo/datepickerinput.html)
 * For Date Range Picker with selected date range and excluded dates: [Demo](http://cyrilcherian.github.io/date-range-picker/demo/datepickerexcluded.html)
+* For Date Range Picker with disbled selection: [Demo](http://cyrilcherian.github.io/date-range-picker/demo/datepickerselectionoff.html)
 
 
 ## Usage
@@ -66,6 +67,18 @@ Create your datepicker with disabled/excluded dates example:
     //this will return an array of selected date instances.
     drp.getDateRange()
     
+```
+# How to disable selection.
+You can disable full selection with disabled/excluded _this can be helpfull in non edit mode_ dates example:
+```javascript
+   //list of disabled dates these dates cannot be selected
+    var disableddates = [new Date("3/12/2014"), new Date("3/14/2014")]
+    //list of dates that needs to be selected
+    var daterange = [new Date("3/1/2014"),new Date("3/2/2014"),new Date("3/3/2014")
+    , new Date("3/20/2014")];
+    //here myDate is the id of the div or input field to which we are making the date range picker.
+    //Selection is disabled by passing enableSelection: false
+    var drp = $("#myDate").datepicker({enableSelection: false, daterange:daterange, disableddates:disableddates});
 ```
 
 
