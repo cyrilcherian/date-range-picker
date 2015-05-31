@@ -3,6 +3,7 @@ var __mypicker = $.fn.datepicker;
 $.fn.datepicker = function(options) {
     options.disableddates = options.disableddates || [];
     options.daterange = options.daterange || [];
+    options.enableSelection = (options.enableSelection == false) ? false : true;
     var oldOptions = jQuery.extend(true, {}, options);
     options.beforeShowDay= function(date, me){
         if (oldOptions.beforeShowDay){
@@ -19,6 +20,8 @@ $.fn.datepicker = function(options) {
         return [true, '', ''];
     }
     options.onSelect = function(date, me){
+        if (!options.enableSelection)
+            return;
         if (!options.dateFormat){
             options.dateFormat = "mm/dd/yy"
         }
