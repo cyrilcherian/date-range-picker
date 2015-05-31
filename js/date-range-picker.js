@@ -19,6 +19,9 @@ $.fn.datepicker = function(options) {
         return [true, '', ''];
     }
     options.onSelect = function(date, me){
+    	if (!options.enableSelection)
+            return;
+
         if (!options.dateFormat){
             options.dateFormat = "mm/dd/yy"
         }
