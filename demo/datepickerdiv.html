@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Date Range Picker</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/date-range-picker.css">
+    <script type="text/javascript" src="../lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/date-range-picker.js"></script>
+    <script>
+        var drp; 
+        function makedatepicker(){
+            drp = $("#myDate").datepicker({});
+        }
+        function getRange(){
+            $("#myOutput").html("");
+            $(drp.getDateRange()).each(function() {
+                $("#myOutput").append($("<li>").html($.datepicker.formatDate("dd/MM/yy",this))); 
+            });
+        }
+
+        $( document ).ready(function() {
+            makedatepicker();
+        });
+    </script>
+</head>
+<body>
+    <div id="myDate" name="myDate"></div>
+    <div style="margin-top: 40px;">
+        <b style="background:#e57373;color:white">Note:</b>
+        <ul>
+            <li style="color: #e57373;">(Click) to select date range.</li>
+            <li style="color: #e57373;">(CTRL + Click) to select/unselect date.</li>
+            <li style="color: #e57373;">For Mac Users (Command + Click) to select/unselect date</li>
+        </ul>
+    </div>
+
+    <button class="ui-datepicker-close ui-state-default ui-priority-secondary ui-corner-all" id="getRange" name="getRange" style="margin-top: 40px;height: 30px;" onclick="getRange()">Get Selected Date</button>
+    <div style="margin-top: 40px;">
+        <h2 style="color: #e57373;">Selected Date List</h2>
+    </div>
+    <ul id="myOutput" style="margin-top: 40px;background: #e57373;width: 144px;color: white;"></ul>
+</body>
+</html>
